@@ -38,6 +38,3 @@ document.addEventListener('keydown', (event) => {
         submitFeedback();
     }
 });
-
-// Practice task
-
