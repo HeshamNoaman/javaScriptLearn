@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie theater seating arrangement</title>
+    <style>
+        /* style ths seat's container */
+        .seating-chart {
+            display: grid;
+            grid-template-columns: repeat(3, 70px);
+            gap: 10px;
+            justify-content: center;
+        }
+
+        /* style individual seats */
+        .seat {
+            width: 70px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        /* style for the booked seats */
+        .booked {
+            background-color: #f00;
+            cursor: not-allowed;
+            color: white;
+        }
+
+        .available {
+            background-color: #7fff00;
+        }
+
+        /* style for the select random seat button */
+        .select-button {
+            width: 235px;
+            padding: 10px;
+            margin: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>movie theater seating arrangement</h1>
+
+    <div id="seating-chart" class="seating-chart">
+        <!-- <div class="seat available" onclick="bookSeat(0, 0, this)">A1</div> -->
+        <div class="seat available" onclick="bookSeat(0, 0)">A1</div>
+        <div class="seat available" onclick="bookSeat(0, 1)">A2</div>
+        <div class="seat available" onclick="bookSeat(0, 2)">A3</div>
+        <div class="seat available" onclick="bookSeat(1, 0)">B1</div>
+        <div class="seat available" onclick="bookSeat(1, 1)">B2</div>
+        <div class="seat available" onclick="bookSeat(1, 2)">B3</div>
+        <div class="seat available" onclick="bookSeat(2, 0)">C1</div>
+        <div class="seat available" onclick="bookSeat(2, 1)">C2</div>
+        <div class="seat available" onclick="bookSeat(2, 2)">C3</div>
+    </div>
+    <div class="btn-container">
+        <button type="button" class="select-button" onclick="bookRandomSeat()">Select Random Seat</button>
+    </div>
+
+
+    <script src="movieSeating.js"></script>
+</body>
+
+</html>
