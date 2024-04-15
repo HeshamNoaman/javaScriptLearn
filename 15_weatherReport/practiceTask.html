@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice task weather</title>
+</head>
+
+<body>
+    <h1>practice task weather</h1>
+
+    <form id="weatherForm" onsubmit="getWeatherInfo(event)">
+        <label for="latitude">latitude</label>
+        <input type="text" name="latitude" id="latitude"> <br> <br>
+
+        <label for="longitude">longitude</label>
+        <input type="text" name="longitude" id="longitude"> <br> <br>
+
+        <input type="submit" value="get weather">
+
+    </form>
+
+    <div id="weatherInfo"></div>
+    <script src="practiceTask.js"></script>
+</body>
+
+</html>
